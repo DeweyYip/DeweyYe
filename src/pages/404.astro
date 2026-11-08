@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const root = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Page not found — Dewey Ye">
+  <section class="not-found"><p class="section-kicker">404 / OFF THE MAP</p><h1>Not this way<span class="accent">.</span></h1><p>This page doesn't exist (yet).</p><a class="button button-primary" href={root}>Back home ↗</a></section>
+</BaseLayout>

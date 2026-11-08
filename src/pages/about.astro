@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const root = import.meta.env.BASE_URL;
+---
+<BaseLayout title="About — Dewey Ye" description="Background and interests of Dewey Ye.">
+  <section class="page-heading"><p class="section-kicker">A LITTLE INTRODUCTION</p><h1>More than a<br /><em>line of code.</em></h1><p class="page-lead">A computer science graduate who likes difficult questions, visual ideas and the process of figuring things out.</p></section>
+  <section class="section content-grid"><div class="aside-label">01 / BACKGROUND</div><div class="prose"><h2>Hi, I'm Dewey.</h2><p>I studied Computer Science at The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen). Along the way, I became interested in how models learn from data, why they fail and how we might build more capable and trustworthy intelligent systems.</p><p>My interests increasingly sit at the intersection of <strong>foundation models, multimodal reasoning and reliability</strong>. I'm particularly excited by questions that may still matter a decade from now, even as today's architectures change.</p></div></section>
+  <section class="section content-grid"><div class="aside-label">02 / OTHER INTERESTS</div><div class="prose"><h2>Beyond the screen.</h2><p>I also care about design, writing and making technology feel human. This site is where those interests can coexist — from a machine-learning experiment to a visual idea or a short reflection.</p><p>Expect a mix of technical work and things that simply make me curious.</p><a class="underlined" href={root + 'projects/'}>See what I've made ↗</a></div></section>
+</BaseLayout>

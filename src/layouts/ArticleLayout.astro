@@ -1,0 +1,17 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter } = Astro.props;
+const root = import.meta.env.BASE_URL;
+---
+<BaseLayout title={frontmatter.title + ' — Dewey Ye'} description={frontmatter.description}>
+  <article class="article">
+    <a class="back-link" href={root + 'writing/'}>← All writing</a>
+    <header class="article-heading">
+      <p class="section-kicker">{frontmatter.pubDate} / NOTE</p>
+      <h1>{frontmatter.title}</h1>
+      <p class="article-description">{frontmatter.description}</p>
+    </header>
+    <div class="article-content"><slot /></div>
+    <div class="article-end"><span>END OF NOTE</span><a href={root + 'writing/'}>Keep reading ↗</a></div>
+  </article>
+</BaseLayout>
