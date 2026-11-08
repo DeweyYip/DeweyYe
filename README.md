@@ -1,39 +1,29 @@
 # DeweyYe — Personal Website
 
-A personal home for projects, research interests and writing. Built with Astro and published using GitHub Pages.
+This is the hand-crafted kraft-paper collage version of DeweyYe, built from the original artwork supplied by the owner.
 
-## Run locally
+## Layout & interaction
+- Fixed original composition: black title bar, kraft-paper banner, corrugated strips, left navigation, three-column collage wall, floating transparent tape, blue diamond.
+- Hover or keyboard-focus **typewriter**, **robot**, or **ice cream** cards to display their alternate artworks.
+- Click to open the matching dedicated writing page (placeholder until article copy is supplied).
+- Navigation stays in the top-left as you scroll, follows the pointer slightly, and changes from white on brown to black on white.
+- Writing and Projects indexes intentionally display **COMING SOON**.
+- All image files are in `assets/images/` with meaningful names.
 
-Requires Node.js 24+.
+## Preview locally
 
-```sh
-npm install
-npm run dev
-```
+Run `python3 -m http.server 8000` at the repo root, then open `http://localhost:8000/`.
 
 ## Publish
 
-Go to **Settings → Pages → Build and deployment → Source → GitHub Actions**.
-The workflow in `.github/workflows/deploy.yml` deploys on commits to `main`.
-Your temporary site URL will be: https://deweyyip.github.io/DeweyYe/
+**Settings → Pages → Build and deployment → Source → GitHub Actions**. The workflow deploys the static site directly (no build step, framework, or package installation required).
 
-## Add a blog post
+All links use relative paths, so the site works both under `deweyyip.github.io/DeweyYe/` and at a future custom domain. The domain's DNS and the GitHub Pages custom domain setting must be configured after purchase.
 
-Create another Markdown file in `src/pages/writing/` with this frontmatter:
+## Writing routes
 
-```yaml
----
-layout: ../../layouts/ArticleLayout.astro
-title: "My new note"
-description: "Brief summary"
-pubDate: "2026-11-09"
----
-```
+- `writing/not-lost-in-ai/` — How do we not get lost in the age of AI
+- `writing/second-glance/` — 第二眼
+- `writing/reflections-at-23/` — 23 岁感悟
 
-## Connect your domain
-
-After you purchase your domain, add it under GitHub **Settings → Pages → Custom domain**, update your registrar's DNS, then change `site` in `astro.config.mjs` and remove its `base` property. The site links use Astro's BASE_URL and will adjust automatically.
-
-Customize the content in `src/pages/`, the layout in `src/layouts/`, and styles in `src/styles/global.css`.
-
-The current blog entry is a starter note: edit or remove it before sharing the site widely.
+Article content must be provided before these pages are considered published.
