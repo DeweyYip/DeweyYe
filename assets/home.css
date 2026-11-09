@@ -1,0 +1,60 @@
+/* Homepage composition, measured against the owner's 838px-wide design. */
+body[data-page="home"] { overflow-x:clip; }
+[data-page="home"] .brand-bar { height:4.65vw; min-height:0; }
+[data-page="home"] .brand-bar a { display:block; width:18%; height:100%; }
+[data-page="home"] .brand-bar img { display:block; width:100%; height:100%; object-fit:contain; }
+[data-page="home"] .paper-hero { height:22vw; min-height:0; background-image:url('./images/torn-brown.webp'); background-position:center 62%; }
+[data-page="home"] .corrugated { height:3.05vw; min-height:0; }
+[data-page="home"] .floating-nav { top:6vw; left:1.2vw; transition:opacity .22s ease, visibility .22s ease, color .18s ease, top .2s ease; }
+[data-page="home"] .floating-nav a { font-size:3.8vw; line-height:1; letter-spacing:-.035em; }
+[data-page="home"].is-scrolled .floating-nav { top:12px; }
+[data-page="home"] .floating-nav.is-hidden { opacity:0; visibility:hidden; pointer-events:none; }
+.opening-collage { position:relative; height:138.5vw; padding-top:5vw; }
+.long-clear-tape { position:absolute; left:10.7%; top:14.7vw; width:16%; height:139vw; object-fit:fill; pointer-events:none; }
+.lead-card { margin-left:42.7%; width:53.5%; aspect-ratio:448/547; }
+.lead-card .card-caption { color:#000; bottom:2.5%; }
+.cross-tape { position:absolute; left:33.4%; top:75.8vw; width:62.5%; height:11.5vw; overflow:hidden; }
+.cross-tape img { position:absolute; width:11.5vw; height:62.5vw; top:50%; left:50%; transform:translate(-50%,-50%) rotate(90deg); }
+.handwritten-notes { position:absolute; left:36.3%; top:92vw; width:58%; }
+.handwritten-notes img { display:block; object-fit:contain; }
+.quote-top { width:100%; }
+.quote-bottom { width:54%; margin-top:1.6vw; }
+.opinion-heading { position:relative; padding:0 0 5.4vw; }
+.opinion-heading h1 { position:relative; z-index:4; margin:0 0 4.7vw 6.5%; font-size:10.45vw; font-weight:900; line-height:1.25; letter-spacing:-.035em; }
+.opinion-heading h1 span { display:block; white-space:nowrap; }
+.opinion-heading h1 span:last-child { margin-left:6%; font-size:10.1vw; letter-spacing:-.045em; }
+.title-paper { position:relative; width:63.1%; height:27.6vw; margin-left:22.3%; }
+.title-paper > img:first-child { width:100%; height:100%; object-fit:cover; }
+.title-seal { position:absolute; right:-9%; bottom:-3vw; width:53%; height:8vw; object-fit:cover; }
+.opinion-subtitle { margin:2vw 0 0; text-align:center; font-size:4vw; font-weight:700; line-height:1.2; letter-spacing:-.025em; color:#252525; }
+.opinion-collage { position:relative; padding-top:5.5vw; }
+.matte-tape { position:absolute; top:0; left:-3.5%; width:19%; height:61vw; object-fit:fill; }
+.opinion-cards { margin-left:29.7%; width:65.7%; display:grid; grid-template-columns:1.08fr 1fr; column-gap:1.5vw; align-items:start; }
+.robot-column .art-card { aspect-ratio:280/400; }
+.ice-column { padding-top:7.8vw; }
+.ice-column .art-card { aspect-ratio:258/400; }
+[data-page="home"] .card-caption { font:700 clamp(9px,1.65vw,24px)/1.1 'Courier New',monospace; letter-spacing:0; }
+.robot-column .card-caption { text-align:left; padding-left:20%; bottom:15%; }
+.ice-column .card-caption { text-align:right; padding-right:6%; bottom:16%; }
+.paper-swatch,.sealed-swatch { display:block; width:100%; object-fit:cover; margin-top:2.3vw; }
+.paper-swatch { height:15.8vw; }
+.sealed-swatch { height:9.2vw; }
+.bottom-swatch { grid-column:1/-1; margin:1.2vw 0 0 auto; width:84.5%; height:5.8vw; background:url('./images/home/sealed.webp') center 15%/cover; }
+.closing-collage { position:relative; height:18vw; overflow:hidden; }
+.closing-edge { position:absolute; left:0; bottom:-.5vw; width:52%; height:14vw; object-fit:cover; object-position:top; }
+.metal-stud { position:absolute; right:3.5%; bottom:4.5vw; width:6vw; height:6vw; object-fit:contain; }
+.home-footer { position:relative; background:#000; height:29vw; display:flex; align-items:flex-end; justify-content:center; overflow:hidden; }
+.home-footer > img { width:43%; height:auto; display:block; margin-bottom:-.5vw; }
+.home-footer > span { position:absolute; right:6%; bottom:3.5vw; color:#fff; font:700 1.7vw 'Courier New',monospace; letter-spacing:.05em; }
+.tactile { transform:translate3d(var(--object-x,0px),var(--object-y,0px),0) rotate(var(--object-rotate,0deg)); transition:transform .25s ease; }
+@media(max-width:650px) {
+ [data-page="home"] .brand-bar { height:7vw; }
+ [data-page="home"] .brand-bar a { width:22%; }
+ [data-page="home"] .floating-nav { top:8.5vw; }
+ [data-page="home"] .floating-nav a { font-size:4.6vw; }
+ [data-page="home"].is-scrolled .floating-nav { top:10px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .tactile { transform:none; transition:none; }
+ [data-page="home"] .floating-nav { transition:none; }
+}

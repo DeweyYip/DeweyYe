@@ -3,12 +3,12 @@
 This is the hand-crafted kraft-paper collage version of DeweyYe, built from the original artwork supplied by the owner.
 
 ## Layout & interaction
-- Fixed original composition: black title bar, kraft-paper banner, corrugated strips, left navigation, three-column collage wall, floating transparent tape, blue diamond.
+- Homepage follows the November 10 reference: featured typewriter, tape, original handwritten notes, oversized opinion statement, staggered robot/ice-cream cards and black wordmark footer.
 - Hover or keyboard-focus **typewriter**, **robot**, or **ice cream** cards to display their alternate artworks.
 - Click to open the matching dedicated writing page (placeholder until article copy is supplied).
-- Navigation stays in the top-left as you scroll, follows the pointer slightly, and changes from white on brown to black on white.
+- Navigation stays in the top-left, changes from white to black, fades out while the opinion statement crosses the menu, and returns afterwards. Hidden navigation is inert and removed from the accessibility tree. Cards and selected paper objects move slightly with the pointer; reduced-motion preferences disable movement.
 - Writing and Projects indexes intentionally display **COMING SOON**.
-- All image files are in `assets/images/` with meaningful names.
+- Homepage assets are cropped and WebP-optimized in `assets/images/home/`; shared interior-page artwork remains unchanged. The title collage is cropped from the supplied design screenshot.
 
 ## Preview locally
 
