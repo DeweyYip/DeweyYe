@@ -23,7 +23,7 @@ All links use relative paths, so the site works both under `deweyyip.github.io/D
 ## Writing routes
 
 - `writing/not-lost-in-ai/` — How do we not get lost in the age of AI
-- `writing/second-glance/` — 第二眼
-- `writing/reflections-at-23/` — 23 岁感悟
+- `writing/second-glance/` — The wind blows
+- `writing/reflections-at-23/` — 23, Therefore I Am
 
 Article content must be provided before these pages are considered published.

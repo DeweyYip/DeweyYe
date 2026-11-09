@@ -26,7 +26,7 @@ body[data-page="home"] { overflow-x:clip; }
 .title-paper { position:relative; width:63.1%; height:27.6vw; margin-left:22.3%; }
 .title-paper > .title-torn { display:block; width:90%; height:auto; }
 .title-seal { position:absolute; right:0; bottom:0; width:48%; height:auto; mix-blend-mode:multiply; }
-.opinion-subtitle { margin:2vw 0 0; text-align:center; font-size:4vw; font-weight:700; line-height:1.2; letter-spacing:-.025em; color:#252525; }
+.opinion-subtitle { margin:2vw 0 0; text-align:center; font-size:3.7vw; font-weight:900; -webkit-text-stroke:.025em currentColor; line-height:1.2; letter-spacing:-.025em; color:#252525; }
 .opinion-collage { position:relative; padding-top:5.5vw; }
 .matte-tape { position:absolute; top:0; left:-3.5%; width:19%; height:61vw; object-fit:fill; }
 .opinion-cards { margin-left:29.7%; width:65.7%; display:grid; grid-template-columns:1.08fr 1fr; column-gap:1.5vw; align-items:start; }
@@ -39,7 +39,6 @@ body[data-page="home"] { overflow-x:clip; }
 .paper-swatch,.sealed-swatch { display:block; width:100%; object-fit:cover; margin-top:2.3vw; }
 .paper-swatch { height:15.8vw; }
 .sealed-swatch { height:9.2vw; }
-.bottom-swatch { grid-column:1/-1; margin:1.2vw 0 0 auto; width:84.5%; height:5.8vw; background:url('./images/home/sealed.webp') center 15%/cover; }
 .closing-collage { position:relative; height:18vw; overflow:hidden; }
 .closing-edge { position:absolute; left:0; bottom:-.5vw; width:52%; height:14vw; object-fit:cover; object-position:top; }
 .metal-stud { position:absolute; right:3.5%; bottom:4.5vw; width:6vw; height:6vw; object-fit:contain; }
