@@ -8,7 +8,7 @@ This is the hand-crafted kraft-paper collage version of DeweyYe, built from the 
 - Click to open the matching dedicated writing page (placeholder until article copy is supplied).
 - Navigation stays in the top-left, changes from white to black, fades out while the opinion statement crosses the menu, and returns afterwards. Hidden navigation is inert and removed from the accessibility tree. Cards and selected paper objects move slightly with the pointer; reduced-motion preferences disable movement.
 - Writing and Projects indexes intentionally display **COMING SOON**.
-- Homepage assets are cropped and WebP-optimized in `assets/images/home/`; shared interior-page artwork remains unchanged. The title collage is cropped from the supplied design screenshot.
+- Homepage assets are cropped and WebP-optimized in `assets/images/home/`; shared interior-page artwork remains unchanged. The hero and two manifesto paper pieces use the supplied high-resolution originals, with cropped white margins. The header wordmark and second handwritten note are right-aligned.
 
 ## Preview locally
 
