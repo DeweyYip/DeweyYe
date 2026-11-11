@@ -57,3 +57,19 @@
  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);addEventListener('load',schedule);reduced.addEventListener('change',schedule);update();
  document.querySelectorAll('.paper-flip,.paper-split').forEach(button=>button.addEventListener('click',()=>{const open=button.classList.toggle('is-open');button.setAttribute('aria-pressed',String(open))}));
 })();
+
+(() => {
+ const tape=document.querySelector('.tape-peel');if(!tape)return;
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ let progress=0,target=0,frame=0,previous=0,pinned=false,hovered=false,focused=false;
+ const render=()=>{tape.style.setProperty('--peel',progress.toFixed(4));tape.style.setProperty('--curl-opacity',Math.min(1,progress*14,(1-progress)*12).toFixed(4));tape.style.setProperty('--curl-angle',`${-9*Math.sin(progress*Math.PI)}deg`)};
+ const step=now=>{const dt=Math.min((now-previous)/1000||.016,.05);previous=now;const direction=Math.sign(target-progress);progress+=direction*dt/(direction>0?1.35:.8);if(direction*(target-progress)<=0)progress=target;render();if(progress!==target)frame=requestAnimationFrame(step);else frame=0};
+ const sync=()=>{target=pinned||hovered||focused?1:0;tape.setAttribute('aria-pressed',String(Boolean(target)));if(reduced.matches){cancelAnimationFrame(frame);frame=0;progress=target;render()}else if(!frame){previous=performance.now();frame=requestAnimationFrame(step)}};
+ tape.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'){hovered=true;sync()}});
+ tape.addEventListener('pointerleave',()=>{hovered=false;sync()});
+ tape.addEventListener('focus',()=>{focused=tape.matches(':focus-visible');sync()});
+ tape.addEventListener('blur',()=>{focused=false;sync()});
+ tape.addEventListener('click',()=>{pinned=!pinned;focused=false;sync()});
+ tape.addEventListener('keydown',e=>{if(e.key==='Escape'){pinned=focused=hovered=false;sync()}});
+ reduced.addEventListener('change',sync);
+})();
