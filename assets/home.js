@@ -46,3 +46,14 @@
     reduced.addEventListener('change', reset);
   });
 })();
+
+(() => {
+ const stage=document.querySelector('.statement-reveal');
+ const paper=stage?.querySelector('.title-paper');
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ let queued=false;
+ const update=()=>{queued=false;if(!stage||!paper)return;const r=stage.getBoundingClientRect();const progress=Math.max(0,Math.min(1,(innerHeight*.18-r.top)/(innerHeight*.5)));paper.style.setProperty('--paper-shift',`${-progress*innerWidth*.95}px`)};
+ const schedule=()=>{if(!queued){queued=true;requestAnimationFrame(update)}};
+ addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);addEventListener('load',schedule);reduced.addEventListener('change',schedule);update();
+ document.querySelectorAll('.paper-flip,.paper-split').forEach(button=>button.addEventListener('click',()=>{const open=button.classList.toggle('is-open');button.setAttribute('aria-pressed',String(open))}));
+})();
