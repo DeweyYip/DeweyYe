@@ -86,7 +86,7 @@ body[data-page="home"] { overflow-x:clip; }
 /* The horizontal tape peels from right to left; copy can be added to .tape-message. */
 .cross-tape.tape-peel { padding:0; border:0; background:transparent; overflow:visible; cursor:pointer; isolation:isolate; --peel:0; }
 .tape-message { position:absolute; z-index:3; inset:0 0 0 auto; width:13%; display:flex; align-items:center; justify-content:center; opacity:var(--pin-opacity,0); }
-.tape-message img { display:block; width:70%; height:70%; object-fit:contain; filter:drop-shadow(2px 3px 2px #302b2230); }
+.tape-message img { display:block; width:70%; height:70%; object-fit:contain; mix-blend-mode:multiply; filter:drop-shadow(2px 3px 2px #302b2230); }
 .tape-attached { position:absolute; z-index:1; inset:0; overflow:hidden; clip-path:inset(0 calc(var(--peel)*100%) 0 0); }
 .tape-attached img { pointer-events:none; user-select:none; }
 .tape-curl { position:absolute; z-index:2; top:-8%; left:calc((1 - var(--peel))*100% - 2%); height:116%; width:8%; background:url('./images/home/tape-peel-curl.webp') center/contain no-repeat; opacity:var(--curl-opacity,0); transform:rotate(var(--curl-angle,0deg)); transform-origin:20% 50%; filter:drop-shadow(5px 7px 5px #493b2520); pointer-events:none; }
