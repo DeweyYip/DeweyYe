@@ -70,9 +70,9 @@ h1 { font-size: clamp(3.5rem, 11vw, 10rem); letter-spacing: -.075em; line-height
   place-items: center;
   pointer-events: none;
   color: #fff;
-  font: 800 clamp(1rem, 2.15vw, 2rem)/1.1 Arial, sans-serif;
+  font: 800 clamp(1rem, 2.25vw, 2rem)/1.1 Arial, sans-serif;
   text-align: center;
-  text-shadow: 0 1px 7px #211018, 0 1px 18px #211018;
+  transform: scaleY(1.12);
 }
 figcaption { margin-top: 14px; font-size: 1rem; font-weight: 700; }
 
@@ -88,4 +88,27 @@ figcaption { margin-top: 14px; font-size: 1rem; font-weight: 700; }
 @media (max-width: 640px) {
   .game-grid { grid-template-columns: 1fr; gap: 36px; }
   .cake-art { aspect-ratio: 1; }
+}
+
+
+.spirit-art img { transform-origin: center; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .spirit-art:hover img { animation: spirit-breathe 5s ease-in-out infinite; }
+}
+@keyframes spirit-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.075); }
+}
+
+
+.project-arrow {
+  display: block;
+  width: 34px;
+  height: auto;
+  transition: transform .2s ease;
+}
+.project-links .project-arrow { width: clamp(28px, 3vw, 40px); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-links a:hover .project-arrow { transform: translateX(4px); }
+  .return:hover .project-arrow { transform: translateX(-4px); }
 }

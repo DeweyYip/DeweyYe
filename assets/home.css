@@ -18,7 +18,7 @@ body[data-page="home"] { overflow-x:clip; }
 .handwritten-notes { position:absolute; left:36.3%; top:92vw; width:58%; }
 .handwritten-notes img { display:block; object-fit:contain; }
 .quote-top { width:100%; }
-.quote-bottom { width:54%; margin:-1.15vw 0 0 auto; }
+.quote-bottom { width:54%; margin:-.35vw 0 0 auto; }
 .opinion-heading { position:relative; padding:0 0 5.4vw; }
 .opinion-heading h1 { position:relative; z-index:4; margin:0 0 4.7vw 6.5%; font-size:10.45vw; font-weight:900; line-height:1.25; letter-spacing:-.035em; }
 .opinion-heading h1 span { display:block; white-space:nowrap; }
@@ -59,7 +59,7 @@ body[data-page="home"] { overflow-x:clip; }
 }
 /* Scroll reveal and tactile cardboard objects. */
 .quote-bottom { position:relative; isolation:isolate; }
-.statement-reveal { position:relative; height:225vh; height:225svh; }
+.statement-reveal { position:relative; height:198vh; height:198svh; }
 .reveal-scene {
   position:sticky; top:0; height:100vh; height:100svh;
   display:grid; place-items:center; overflow:hidden; isolation:isolate; background:#fff;
