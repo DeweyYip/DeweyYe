@@ -1,8 +1,8 @@
 /* Homepage composition, measured against the owner's 838px-wide design. */
 body[data-page="home"] { overflow-x:clip; }
-[data-page="home"] .brand-bar { height:4.65vw; min-height:0; justify-content:flex-end; padding-right:1.2vw; }
+[data-page="home"] .brand-bar { height:4.65vw; min-height:0; justify-content:flex-start; padding-left:1.2vw; }
 [data-page="home"] .brand-bar a { display:block; width:18%; height:100%; }
-[data-page="home"] .brand-bar img { display:block; width:100%; height:100%; object-fit:contain; }
+[data-page="home"] .brand-bar img { display:block; width:100%; height:100%; object-fit:contain; object-position:left center; }
 [data-page="home"] .paper-hero { height:22vw; min-height:0; background-image:url('./images/home/hero-torn-hq.webp'); background-position:center 40%; }
 [data-page="home"] .corrugated { height:3.05vw; min-height:0; }
 [data-page="home"] .floating-nav { top:6vw; left:1.2vw; transition:opacity .22s ease, visibility .22s ease, color .18s ease, top .2s ease; }
