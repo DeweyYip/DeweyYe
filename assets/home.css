@@ -39,7 +39,7 @@ body[data-page="home"] { overflow-x:clip; }
 .paper-swatch,.sealed-swatch { display:block; width:100%; object-fit:cover; margin-top:2.3vw; }
 .paper-swatch { height:15.8vw; }
 .sealed-swatch { height:9.2vw; }
-.closing-collage { position:relative; height:12vw; overflow:hidden; }
+.closing-collage { position:relative; height:3vw; overflow:hidden; }
 .closing-edge { position:absolute; left:0; bottom:-.5vw; width:52%; height:14vw; object-fit:cover; object-position:top; }
 .metal-stud { position:absolute; right:3.5%; bottom:4.5vw; width:6vw; height:6vw; object-fit:contain; }
 .home-footer { position:relative; background:#000; height:29vw; display:flex; align-items:flex-end; justify-content:center; overflow:hidden; }
@@ -64,7 +64,7 @@ body[data-page="home"] { overflow-x:clip; }
 .reveal-scene .opinion-subtitle { margin:0; width:78%; position:absolute; left:15%; top:8vw; z-index:0; font-size:3.1vw; }
 .reveal-scene .title-paper { position:absolute; z-index:1; left:22.3%; top:0; margin:0; transform:translate3d(var(--paper-shift,0px),0,0); will-change:transform; pointer-events:none; overflow:hidden; }
 .title-paper .title-torn { position:relative; z-index:1; width:100%; height:100%; object-fit:fill; }
-.oh-well { display:block; margin:.8vw 8% 0 0; text-align:right; color:#1d1b18; font:italic 700 3.5vw/1.1 'Courier New',monospace; -webkit-text-stroke:0; letter-spacing:0; }
+.oh-well { display:block; margin:.8vw 0 0; text-align:center; font:inherit; font-style:normal; color:inherit; letter-spacing:inherit; }
 .paper-swatch,.sealed-swatch { border:0; padding:0; background:none; cursor:pointer; position:relative; }
 .paper-flip { perspective:1100px; overflow:visible; }
 .flip-inner { display:block; width:100%; height:100%; position:relative; transform-style:preserve-3d; transition:transform .8s cubic-bezier(.2,.7,.2,1); }
@@ -103,4 +103,4 @@ body[data-page="home"] { overflow-x:clip; }
 @media(hover:hover) and (pointer:fine) { .paper-split:hover .future-heart { clip-path:inset(0); visibility:visible; transition-delay:0s; } }
 
 /* Reserve the entire opening travel so the tack stays below the lower flap. */
-.closing-stud { display:block; width:6vw; height:6vw; object-fit:contain; margin:15vw 0 0 auto; }
+.closing-stud { display:block; width:6vw; height:6vw; object-fit:contain; margin:13.5vw 0 0 auto; }
