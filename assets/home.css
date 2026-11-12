@@ -18,7 +18,7 @@ body[data-page="home"] { overflow-x:clip; }
 .handwritten-notes { position:absolute; left:36.3%; top:92vw; width:58%; }
 .handwritten-notes img { display:block; object-fit:contain; }
 .quote-top { width:100%; }
-.quote-bottom { width:54%; margin:-.5vw 0 0 auto; }
+.quote-bottom { width:54%; margin:-1.15vw 0 0 auto; }
 .opinion-heading { position:relative; padding:0 0 5.4vw; }
 .opinion-heading h1 { position:relative; z-index:4; margin:0 0 4.7vw 6.5%; font-size:10.45vw; font-weight:900; line-height:1.25; letter-spacing:-.035em; }
 .opinion-heading h1 span { display:block; white-space:nowrap; }
@@ -59,10 +59,20 @@ body[data-page="home"] { overflow-x:clip; }
 }
 /* Scroll reveal and tactile cardboard objects. */
 .quote-bottom { position:relative; isolation:isolate; }
-.statement-reveal { position:relative; height:calc(clamp(230px,34vw,580px) + 24vh); }
-.reveal-scene { position:sticky; top:18vh; height:clamp(230px,34vw,580px); display:flex; align-items:center; justify-content:center; }
-.reveal-scene .opinion-subtitle { margin:0; width:78%; position:absolute; left:15%; top:8vw; z-index:0; font-size:3.1vw; }
-.reveal-scene .title-paper { position:absolute; z-index:1; left:22.3%; top:0; margin:0; transform:translate3d(var(--paper-shift,0px),0,0); will-change:transform; pointer-events:none; overflow:hidden; }
+.statement-reveal { position:relative; height:225vh; height:225svh; }
+.reveal-scene {
+  position:sticky; top:0; height:100vh; height:100svh;
+  display:grid; place-items:center; overflow:hidden; isolation:isolate; background:#fff;
+}
+.reveal-scene .opinion-subtitle {
+  margin:0; width:94%; z-index:0; font-size:clamp(1.25rem, 4.3vw, 5rem);
+}
+.reveal-scene .title-paper {
+  position:absolute; z-index:1; left:16%; top:50%; margin:0;
+  width:68%; height:auto; aspect-ratio: 915 / 399;
+  transform:translate3d(var(--paper-shift,0px),-50%,0);
+  will-change:transform; pointer-events:none;
+}
 .title-paper .title-torn { position:relative; z-index:1; width:100%; height:100%; object-fit:fill; }
 .oh-well { display:block; margin:.8vw 0 0; text-align:center; font:inherit; font-style:normal; color:inherit; letter-spacing:inherit; }
 .paper-swatch,.sealed-swatch { border:0; padding:0; background:none; cursor:pointer; position:relative; }
@@ -96,7 +106,7 @@ body[data-page="home"] { overflow-x:clip; }
 /* Correct stacking and strictly contained reveal surfaces. */
 .quote-top { position:relative; z-index:2; }
 .quote-bottom { z-index:1; }
-.tape-message { z-index:0; left:45%; right:auto; width:14%; }
+.tape-message { z-index:0; left:46%; right:auto; width:8%; }
 .tape-message img { position:static; transform:none; width:100%; height:100%; filter:none; }
 .paper-split .future-heart { clip-path:inset(0 0 100%); visibility:hidden; transition:clip-path .7s cubic-bezier(.2,.7,.2,1),visibility 0s .7s; }
 .paper-split.is-open .future-heart { clip-path:inset(0); visibility:visible; transition-delay:0s; }
@@ -104,3 +114,15 @@ body[data-page="home"] { overflow-x:clip; }
 
 /* Reserve the entire opening travel so the tack stays below the lower flap. */
 .closing-stud { display:block; width:6vw; height:6vw; object-fit:contain; margin:13.5vw 0 0 auto; }
+
+.ink-filter { position:absolute; pointer-events:none; }
+.future-heart { background:#fff; }
+.future-heart span,.future-heart small { filter:url(#worn-ink); }
+@media(max-width:650px) {
+ .reveal-scene .title-paper { left:7%; width:86%; }
+ .future-heart { gap:.25vw; font-size:clamp(7px,2vw,12px); }
+ .future-heart small { font-size:clamp(6px,1.6vw,10px); }
+}
+@media(prefers-reduced-motion:reduce) {
+ .statement-reveal,.reveal-scene { height:100svh; }
+}
