@@ -78,7 +78,7 @@ h1 { font-size: clamp(3.5rem, 11vw, 10rem); letter-spacing: -.075em; line-height
   text-align: center;
   transform: scaleY(1.12);
 }
-figcaption { margin-top: 18px; }
+.game-grid figcaption { margin-top: 18px; text-align: center; }
 .planet-title {
   font: 800 clamp(1.5rem, 4.5vw, 3.4rem)/1.05 "Courier New", monospace;
   letter-spacing: .07em;
