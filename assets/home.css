@@ -29,18 +29,15 @@ body[data-page="home"] { overflow-x:clip; }
 .lead-card { aspect-ratio:1280 / 1707; }
 .lead-card .art-default { object-fit:contain; }
 .lead-card .card-caption { color:#000; bottom:2.5%; }
-.lead-print { margin:0; background:#f8f8f8; perspective:950px; }
-.lead-print img { display:block; width:100%; height:auto; transform-origin:50% 7%; }
+.lead-print { margin:0; background:#f8f8f8; }
+.lead-print img { display:block; width:100%; height:auto; }
 @media (hover:hover) and (prefers-reduced-motion:no-preference) {
   .lead-card:hover .art-default,.lead-card:focus-visible .art-default {
     animation:ice-cream-wobble .72s ease-in-out both;
     transform-origin:50% 76%;
   }
-  .lead-print img { transition:transform .4s ease, filter .4s ease; }
-  .lead-print:hover img {
-    transform:rotateX(-8deg) rotateZ(1deg) translateY(-2%) scale(.97);
-    filter:drop-shadow(0 10px 9px #2b170426);
-  }
+  .lead-print img { transition:transform .22s ease; }
+  .lead-print:hover img { transform:translateY(-2px); }
 }
 @keyframes ice-cream-wobble {
   0%,100% { transform:rotate(0deg); }
