@@ -61,9 +61,9 @@
 (() => {
  const tape=document.querySelector('.tape-peel');if(!tape)return;
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
- const stopAt=0.125;
+ const stopAt=0.875;
  let progress=0,target=0,frame=0,previous=0,pinned=false,hovered=false,focused=false;
- const render=()=>{tape.style.setProperty('--peel',progress.toFixed(4));tape.style.setProperty('--pin-opacity',Math.min(1,progress/stopAt*3).toFixed(4));tape.style.setProperty('--curl-opacity',Math.min(1,progress*14,(stopAt-progress)*14).toFixed(4));tape.style.setProperty('--curl-angle',`${-9*Math.sin(progress/stopAt*Math.PI)}deg`)};
+ const render=()=>{tape.style.setProperty('--peel',progress.toFixed(4));tape.style.setProperty('--pin-opacity',Math.max(0,Math.min(1,(progress-.35)/.2)).toFixed(4));tape.style.setProperty('--curl-opacity',Math.min(1,progress*14).toFixed(4));tape.style.setProperty('--curl-angle',`${-9*Math.sin(progress/stopAt*Math.PI)}deg`)};
  const step=now=>{const dt=Math.min((now-previous)/1000||.016,.05);previous=now;const direction=Math.sign(target-progress);progress+=direction*dt/(direction>0?1.35:.8);if(direction*(target-progress)<=0)progress=target;render();if(progress!==target)frame=requestAnimationFrame(step);else frame=0};
  const sync=()=>{target=pinned||hovered||focused?stopAt:0;tape.setAttribute('aria-pressed',String(Boolean(target)));if(reduced.matches){cancelAnimationFrame(frame);frame=0;progress=target;render()}else if(!frame){previous=performance.now();frame=requestAnimationFrame(step)}};
  tape.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'){hovered=true;sync()}});
