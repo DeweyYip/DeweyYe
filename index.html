@@ -4,11 +4,19 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ffffff"><meta name="description" content="DeweyYe — personal writing, projects and visual experiments.">
 <title>DeweyYe — Home</title>
-<link rel="stylesheet" href="assets/main.css"><link rel="stylesheet" href="assets/home.css?v=editorial-7">
+<link rel="stylesheet" href="assets/main.css"><link rel="stylesheet" href="assets/home.css?v=language-1">
 <link rel="preload" href="assets/images/home/ice.webp" as="image">
+<script src="assets/language.js?v=1" defer></script>
 </head>
 <body data-page="home">
-<header class="brand-bar"><a href="" aria-label="DeweyYe home"><img src="assets/images/home/brand.webp" alt="DEWEYYE" width="2190" height="718"></a></header>
+<header class="brand-bar"><a href="" aria-label="DeweyYe home"><img src="assets/images/home/brand.webp" alt="DEWEYYE" width="2190" height="718"></a>
+<details class="language-picker" data-language-picker>
+  <summary aria-label="Language"><img src="assets/images/navigation/lan.webp" alt="LAN"></summary>
+  <div class="language-options">
+    <button type="button" data-language="en" lang="en" aria-pressed="true">English</button>
+    <button type="button" data-language="zh-Hant" lang="zh-Hant" aria-pressed="false">繁體中文</button>
+  </div>
+</details></header>
 <div class="paper-hero" aria-hidden="true"></div>
 <nav class="floating-nav" aria-label="Main navigation">
 <a href="" class="nav-item selected" aria-current="page">Home</a>
@@ -23,12 +31,15 @@
 <img class="long-clear-tape" src="assets/images/home/clear-tape.webp" alt="" aria-hidden="true">
 <a class="art-card article-card lead-card tactile" href="writing/second-glance/" aria-label="Read The wind blows">
 <img src="assets/images/home/ice.webp" alt="A hand-painted ice cream on cardboard" class="art-default" fetchpriority="high">
-<img src="assets/images/home/ice-hover.webp" alt="" class="art-hover">
+<img src="assets/images/home/ice-hover.webp" alt="" class="art-hover" data-only-language="en">
+<span class="art-hover translated-art" data-only-language="zh-Hant" lang="zh-Hant" hidden>我不記得我寫過這個</span>
 <span class="card-caption">STORY</span></a>
-<button class="cross-tape tape-peel" type="button" aria-label="Peel back the tape to reveal the space underneath" aria-pressed="false"><span class="tape-message"><img src="assets/images/home/pin-new.webp" alt="" draggable="false"></span><span class="tape-attached"><img src="assets/images/home/clear-tape.webp" alt="" draggable="false"></span><span class="tape-curl" aria-hidden="true"></span></button>
+<button class="cross-tape tape-peel" type="button" aria-label="Peel back the tape to reveal the space underneath" aria-pressed="false"><span id="tape-message" class="tape-message" aria-hidden="true"><span class="tape-copy"><span>u think ur so funny</span><span>and cool huh????</span><span>well u are</span><span>love u</span></span></span><span class="tape-attached"><img src="assets/images/home/clear-tape.webp" alt="" draggable="false"></span><span class="tape-curl" aria-hidden="true"></span></button>
 <div class="handwritten-notes">
-<img class="quote-top tactile" src="assets/images/home/arena-top-white.webp" alt="It is not the critic who counts… The credit belongs to the man who is actually in the arena." loading="lazy">
-<img class="quote-bottom tactile" src="assets/images/home/arena-bottom-white.webp" alt="Who knows great devotions, who spends himself in a worthy cause…" loading="lazy">
+<img class="quote-top tactile" data-only-language="en" src="assets/images/home/arena-top-white.webp" alt="It is not the critic who counts… The credit belongs to the man who is actually in the arena." loading="lazy">
+<img class="quote-bottom tactile" data-only-language="en" src="assets/images/home/arena-bottom-white.webp" alt="Who knows great devotions, who spends himself in a worthy cause…" loading="lazy">
+<p class="quote-top quote-translation tactile" data-only-language="zh-Hant" lang="zh-Hant" hidden>重要的不是批評家，不是那個指出強者在哪裡跌倒、事情本來可以怎麼做得更好的人。真正值得敬佩的，是站在競技場裡，滿臉塵土、汗水和鮮血的人。他奮力拚搏，一再犯錯、一再失手，因為努力不可能沒有錯誤和缺失。但他確確實實努力去做了。</p>
+<p class="quote-bottom quote-translation tactile" data-only-language="zh-Hant" lang="zh-Hant" hidden>他懂得全心投入，把自己獻給值得的事。最好的情況，是他最終嚐到成就的喜悅；最糟的情況，就算失敗了，他也是放膽一搏才失敗的。他永遠不會與那些冷漠又膽怯、既不知勝利也不知失敗的人站在一起。</p>
 </div>
 </section>
 <section class="opinions" aria-labelledby="opinions-title">
@@ -45,14 +56,16 @@
 <div class="robot-column">
 <a class="art-card article-card tactile" href="writing/not-lost-in-ai/" aria-label="Read How do we not get lost in the age of AI">
 <img src="assets/images/home/robot.webp" alt="A hand-painted robot on cardboard" class="art-default" loading="lazy">
-<img src="assets/images/home/robot-hover.webp" alt="" class="art-hover" loading="lazy">
+<img src="assets/images/home/robot-hover.webp" alt="" class="art-hover" data-only-language="en" loading="lazy">
+<span class="art-hover translated-art" data-only-language="zh-Hant" lang="zh-Hant" hidden>拜託，別把腦子外包了</span>
 <span class="card-caption">ARTICLE</span></a>
 <button class="paper-swatch paper-flip" aria-label="Flip cardboard to reveal a Hemingway quote" aria-pressed="false"><span class="flip-inner"><span class="paper-front"></span><span class="paper-back"><span class="future-copy"></span></span></span></button>
 </div>
 <div class="ice-column">
 <a class="art-card article-card tactile" href="writing/reflections-at-23/" aria-label="Read 23, Therefore I Am">
 <img src="assets/images/home/typewriter.webp" alt="A hand-painted typewriter on cardboard" class="art-default" loading="lazy">
-<img src="assets/images/home/typewriter-hover.webp" alt="" class="art-hover" decoding="async">
+<img src="assets/images/home/typewriter-hover.webp" alt="" class="art-hover" data-only-language="en" decoding="async">
+<span class="art-hover translated-art" data-only-language="zh-Hant" lang="zh-Hant" hidden>我為什麼不再管你怎麼想</span>
 <span class="card-caption">ARTICLE</span></a>
 <button class="sealed-swatch paper-split" aria-label="Open the cardboard seal to reveal a quote" aria-pressed="false"><span class="future-heart"><span>“The first draft of anything is shit”</span><small>— Ernest Hemingway</small></span><span class="split-top"></span><span class="split-bottom"></span></button>
 <img class="closing-stud tactile" src="assets/images/home/stud.webp" alt="" aria-hidden="true" loading="lazy">
@@ -70,5 +83,5 @@
     <feDisplacementMap in="SourceGraphic" in2="grain" scale="1.15" xChannelSelector="R" yChannelSelector="G"/>
   </filter>
 </svg>
-<script src="assets/site.js" defer></script><script src="assets/home.js?v=editorial-5" defer></script>
+<script src="assets/site.js" defer></script><script src="assets/home.js?v=language-1" defer></script>
 </body></html>
