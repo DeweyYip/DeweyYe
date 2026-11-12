@@ -1,3 +1,10 @@
+// Fresh visits start at the footer. Let history and fragment links keep their own position.
+(() => {
+  const navigation = performance.getEntriesByType('navigation')[0];
+  if (location.hash || (navigation && navigation.type !== 'navigate')) return;
+  window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
+})();
+
 (() => {
   const nav = document.querySelector('.floating-nav');
   const heading = document.querySelector('.opinion-heading');
