@@ -81,13 +81,13 @@ h1 { font-size: clamp(3.5rem, 11vw, 10rem); letter-spacing: -.075em; line-height
 .cake-art .release { font-size: clamp(.875rem, 1.95vw, 1.75rem); }
 .game-grid figcaption { margin-top: 18px; text-align: center; }
 .planet-title {
-  font: 800 clamp(1.3rem, 3.9vw, 2.95rem)/1.05 "Courier New", monospace;
+  font: 800 clamp(1.125rem, 3.35vw, 2.55rem)/1.05 "Courier New", monospace;
   letter-spacing: .07em;
   color: #252755;
 }
 .planet-title span { color: #9d3d79; }
 .slime-title {
-  font: 900 clamp(1.3rem, 3.8vw, 2.85rem)/1.05 ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
+  font: 900 clamp(1.125rem, 3.3vw, 2.45rem)/1.05 ui-rounded, "Arial Rounded MT Bold", system-ui, sans-serif;
   letter-spacing: -.065em;
   color: #882441;
 }
