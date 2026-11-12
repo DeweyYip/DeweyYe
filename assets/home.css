@@ -10,16 +10,44 @@ body[data-page="home"] { overflow-x:clip; }
 [data-page="home"].is-scrolled .floating-nav { top:12px; }
 [data-page="home"] .floating-nav.is-hidden { opacity:0; visibility:hidden; pointer-events:none; }
 .opening-collage {
-  --lead-width: clamp(25vw, calc((100svh - 32vw) * .95), 40vw);
-  --lead-height-saved: calc(65.3vw - var(--lead-width) * 1.3336);
+  --lead-ice-width: 29.6vw;
+  --lead-print-width: 32.5vw;
+  --lead-height: max(calc(var(--lead-ice-width) * 1707 / 1280), calc(var(--lead-print-width) * 1402 / 1122));
+  --lead-height-saved: calc(65.3vw - var(--lead-height));
   position:relative;
   height:calc(138.5vw - var(--lead-height-saved));
   padding-top:5vw;
 }
 .long-clear-tape { position:absolute; left:10.7%; top:14.7vw; width:16%; height:calc(139vw - var(--lead-height-saved)); object-fit:fill; pointer-events:none; }
-.lead-card { margin-left:34%; width:var(--lead-width); aspect-ratio:1280 / 1707; }
+.lead-pair {
+  display:grid;
+  grid-template-columns:var(--lead-ice-width) var(--lead-print-width);
+  align-items:start;
+  gap:4.7vw;
+  margin-left:30.9%;
+}
+.lead-card { aspect-ratio:1280 / 1707; }
 .lead-card .art-default { object-fit:contain; }
 .lead-card .card-caption { color:#000; bottom:2.5%; }
+.lead-print { margin:0; background:#f8f8f8; perspective:950px; }
+.lead-print img { display:block; width:100%; height:auto; transform-origin:50% 7%; }
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+  .lead-card:hover .art-default,.lead-card:focus-visible .art-default {
+    animation:ice-cream-wobble .72s ease-in-out both;
+    transform-origin:50% 76%;
+  }
+  .lead-print img { transition:transform .4s ease, filter .4s ease; }
+  .lead-print:hover img {
+    transform:rotateX(-8deg) rotateZ(1deg) translateY(-2%) scale(.97);
+    filter:drop-shadow(0 10px 9px #2b170426);
+  }
+}
+@keyframes ice-cream-wobble {
+  0%,100% { transform:rotate(0deg); }
+  28% { transform:rotate(-2.2deg); }
+  57% { transform:rotate(1.7deg); }
+  78% { transform:rotate(-.7deg); }
+}
 .cross-tape { position:absolute; left:33.4%; top:calc(75.8vw - var(--lead-height-saved)); width:62.5%; height:11.5vw; overflow:hidden; }
 .cross-tape img { position:absolute; width:11.5vw; height:62.5vw; top:50%; left:50%; transform:translate(-50%,-50%) rotate(90deg); }
 .handwritten-notes { position:absolute; left:36.3%; top:calc(92vw - var(--lead-height-saved)); width:58%; }
