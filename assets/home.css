@@ -1,6 +1,6 @@
 /* Homepage composition, measured against the owner's 838px-wide design. */
 body[data-page="home"] { overflow-x:clip; }
-[data-page="home"] .brand-bar { height:4.65vw; min-height:0; justify-content:space-between; padding-inline:1.2vw; }
+[data-page="home"] .brand-bar { height:4.65vw; min-height:0; justify-content:flex-end; padding-right:1.2vw; }
 [data-page="home"] .brand-bar a { display:block; width:18%; height:100%; }
 [data-page="home"] .brand-bar img { display:block; width:100%; height:100%; object-fit:contain; }
 [data-page="home"] .paper-hero { height:22vw; min-height:0; background-image:url('./images/home/hero-torn-hq.webp'); background-position:center 40%; }
@@ -47,9 +47,9 @@ body[data-page="home"] { overflow-x:clip; }
 .home-footer > span { position:absolute; right:6%; bottom:3.5vw; color:#fff; font:700 1.7vw 'Courier New',monospace; letter-spacing:.05em; }
 .tactile { transform:translate3d(var(--object-x,0px),var(--object-y,0px),0) rotate(var(--object-rotate,0deg)); transition:transform .25s ease; }
 @media(max-width:650px) {
- [data-page="home"] .brand-bar { height:max(44px,7vw); }
+ [data-page="home"] .brand-bar { height:7vw; }
  [data-page="home"] .brand-bar a { width:22%; }
- [data-page="home"] .floating-nav { top:calc(max(44px,7vw) + 1.5vw); }
+ [data-page="home"] .floating-nav { top:8.5vw; }
  [data-page="home"] .floating-nav a { font-size:4.6vw; }
  [data-page="home"].is-scrolled .floating-nav { top:10px; }
 }
@@ -131,39 +131,4 @@ body[data-page="home"] { overflow-x:clip; }
 }
 @media(prefers-reduced-motion:reduce) {
  .statement-reveal,.reveal-scene { height:100svh; }
-}
-
-[data-page="home"] [data-only-language][hidden] { display:none; }
-.language-picker { position:relative; z-index:60; margin-inline-end:.3vw; }
-.language-picker summary {
-  display:grid; place-items:center; width:clamp(44px,5vw,82px);
-  min-height:40px; cursor:pointer; list-style:none;
-}
-.language-picker summary::-webkit-details-marker { display:none; }
-[data-page="home"] .brand-bar .language-picker img {
-  width:76%; height:auto; transform:rotate(-3deg);
-}
-.language-options {
-  position:absolute; inset-inline-end:0; top:100%;
-  display:grid; min-width:116px; padding:4px;
-  background:#111; border:1px solid #4b4846;
-}
-.language-options button {
-  padding:8px 10px; background:none; border:0; color:#fff; cursor:pointer;
-  font:700 14px/1.3 Arial,sans-serif; text-align:start; white-space:nowrap;
-}
-.language-options button:hover,.language-options button:focus-visible { background:#39312a; }
-.language-options button[aria-pressed="true"] { text-decoration:underline; text-underline-offset:.2em; }
-.quote-translation {
-  margin-top:0; margin-bottom:0; padding:clamp(5px,1.35vw,22px);
-  background:#c89869 url('./images/home/paper.webp') center / cover;
-  color:#153f29; font:800 clamp(7px,1.35vw,22px)/1.34 serif;
-  clip-path:polygon(0 3%,16% 1%,28% 2%,51% 0,76% 3%,98% 0,100% 94%,81% 97%,65% 96%,49% 100%,31% 96%,14% 100%,1% 96%);
-}
-.quote-bottom.quote-translation { margin-top:.8vw; font-size:clamp(7px,1.16vw,19px); }
-.translated-art {
-  position:absolute; inset:0; display:grid; place-items:center; padding:12%;
-  background:#c89869 url('./images/home/paper.webp') center / cover;
-  color:#1b130f; text-align:center;
-  font:900 clamp(15px,4vw,64px)/1.15 serif; letter-spacing:-.02em;
 }
