@@ -133,7 +133,7 @@ html:has(.writing-page), .writing-page { color: #171717; background: #fff; }
   height: auto;
   transition: translate .2s ease;
 }
-.return .hand-arrow { transform: scaleX(-1); }
+.return .hand-arrow { width: 44px; }
 .project-links .hand-arrow { width: clamp(28px, 3vw, 40px); }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .project-links a:hover .hand-arrow { translate: 4px; }
