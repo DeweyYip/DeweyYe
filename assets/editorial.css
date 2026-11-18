@@ -182,21 +182,22 @@ html:has(.writing-page), .writing-page { color: #171717; background: #fff; }
 }
 
 .essay-footer {
-  background: #fff;
-  padding: 0 4% 24px;
+  background: #000;
+  padding: 16px 4%;
   text-align: center;
 }
 
 .essay-wordmark {
   display: inline-block;
   padding: 8px;
-  color: #888;
+  color: #fff;
   font: 400 0.75rem/1.4 "Courier New", Courier, monospace;
   text-decoration: none;
 }
 
 .essay-wordmark:hover {
-  color: #171717;
+  color: #fff;
+  text-decoration: underline;
 }
 
 .article-date {
