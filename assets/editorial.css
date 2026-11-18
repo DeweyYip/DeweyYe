@@ -182,16 +182,21 @@ html:has(.writing-page), .writing-page { color: #171717; background: #fff; }
 }
 
 .essay-footer {
-  background: #000;
-  padding: clamp(2.75rem, 5vw, 5.5rem) 0 clamp(1rem, 2vw, 2rem);
+  background: #fff;
+  padding: 0 4% 24px;
+  text-align: center;
 }
 
 .essay-wordmark {
-  display: block;
-  color: #fff;
-  font: 700 clamp(1.5rem, 5.5vw, 5rem)/1.15 "Courier New", Courier, monospace;
-  letter-spacing: -0.06em;
-  text-align: center;
+  display: inline-block;
+  padding: 8px;
+  color: #888;
+  font: 400 0.75rem/1.4 "Courier New", Courier, monospace;
+  text-decoration: none;
+}
+
+.essay-wordmark:hover {
+  color: #171717;
 }
 
 .article-date {
