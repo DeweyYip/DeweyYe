@@ -140,3 +140,28 @@ html:has(.writing-page), .writing-page { color: #171717; background: #fff; }
   .project-links a:hover .hand-arrow { translate: 4px; }
   .return:hover .hand-arrow { translate: -4px; }
 }
+
+.article.typewritten-essay {
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(1rem, 0.94rem + 0.3vw, 1.125rem);
+  line-height: 1.7;
+  padding-bottom: clamp(2rem, 6vw, 5rem);
+}
+
+.article.typewritten-essay h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+  margin: 0 0 1em;
+}
+
+.article.typewritten-essay h2 {
+  font-size: clamp(1.25rem, 1.1rem + 0.7vw, 1.6rem);
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin: 2em 0 0.75em;
+}
+
+.article.typewritten-essay p {
+  margin: 0 0 1.1em;
+}
