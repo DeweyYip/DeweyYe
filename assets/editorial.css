@@ -141,15 +141,17 @@ html:has(.writing-page), .writing-page { color: #171717; background: #fff; }
   .return:hover .hand-arrow { translate: -4px; }
 }
 
-.article.personal-essay {
-  font-size: clamp(1rem, 0.94rem + 0.3vw, 1.125rem);
-  line-height: 1.7;
-  padding-bottom: clamp(2rem, 6vw, 5rem);
+.writing-shell:has(.personal-essay) {
+  padding-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+.personal-essay > :is(h2, p) {
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .essay-illustration {
   display: block;
-  width: clamp(9rem, 22vw, 14rem);
+  width: clamp(11rem, 26vw, 17rem);
   max-width: 100%;
   height: auto;
   margin-bottom: clamp(1.25rem, 4vw, 2.25rem);
@@ -170,5 +172,23 @@ html:has(.writing-page), .writing-page { color: #171717; background: #fff; }
 }
 
 .article.personal-essay p {
-  margin: 0 0 1.1em;
+  font-size: clamp(1.125rem, 1.03rem + 0.4vw, 1.3125rem);
+  line-height: 1.65;
+  margin: 0 0 1.25em;
+}
+
+.article.personal-essay p:last-child {
+  margin-bottom: 0;
+}
+
+.essay-footer {
+  background: #000;
+  padding: clamp(2.75rem, 5vw, 5.5rem) 0 clamp(1rem, 2vw, 2rem);
+}
+
+.essay-footer img {
+  display: block;
+  width: 38%;
+  height: auto;
+  margin-inline: auto;
 }
