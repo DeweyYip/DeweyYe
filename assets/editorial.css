@@ -186,9 +186,18 @@ html:has(.writing-page), .writing-page { color: #171717; background: #fff; }
   padding: clamp(2.75rem, 5vw, 5.5rem) 0 clamp(1rem, 2vw, 2rem);
 }
 
-.essay-footer img {
+.essay-wordmark {
   display: block;
-  width: 38%;
-  height: auto;
-  margin-inline: auto;
+  color: #fff;
+  font: 700 clamp(1.5rem, 5.5vw, 5rem)/1.15 "Courier New", Courier, monospace;
+  letter-spacing: -0.06em;
+  text-align: center;
+}
+
+.article-date {
+  display: block;
+  color: #888;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  margin: -1em 0 2.25em;
 }
